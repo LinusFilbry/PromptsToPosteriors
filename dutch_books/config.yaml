@@ -1,0 +1,18 @@
+# ------- tunable via CLI -------
+# which of the three dutch book scenarios to run
+scenarios: [normalization, monotonicity, extensionality]
+
+# whether to elicit in the same or across chats
+elicitation_modes: [same_chat, separate_chat]
+
+
+
+# ------- not tunable via CLI -------
+model_runtime:
+  max_model_len: 3000
+  max_model_len_thinking: 12000
+  thinking_token_budget: 9000
+  gpu_memory_util: 0.9
+  max_num_seqs: 16
+
+answer_temperature: 0.7

@@ -1,0 +1,74 @@
+# ------- tunable via CLI -------
+# which methods to run:
+  # naive_eigreasoning: naive question generation using reasoning
+  # EIG: BED-LLM methodology
+  # llm-driven & oracle-driven: sequential experimental design runs as presented in our work
+method_names:
+  #  - "naive_eigreasoning"
+  #  - "EIG"
+  - "llm-driven"
+  - "oracle-driven"
+
+# which animals the corresponding methods are run on
+animals:
+  - 'Coyote'
+  - 'Rhinoceros beetle'
+  - 'Wolverine'
+  - 'Saiga antelope'
+  - 'Yak'
+  - 'Kiwi'
+  - 'Zebra'
+  - 'Golden jackal'
+  - 'Horseshoe crab'
+  - 'Sand cat'
+  - 'European Badger'
+  - 'Blue dragon sea slug'
+  - 'Cassowary'
+  - 'Electric eel'
+  - 'Flying fox'
+  - 'Giraffe'
+  - 'Hammerhead shark'
+  - 'Vicuña'
+  - 'Ibex'
+  - 'Aye-aye'
+  - 'Scarlet macaw'
+  - 'Peregrine falcon'
+  - 'Wildebeest'
+  - 'Capybara'
+  - 'Sea otter'
+  - 'Leafcutter ant'
+  - 'African elephant'
+  - 'Rosy boa'
+  - 'Quetzal'
+  - 'Snowy owl'
+  - 'Jerboa'
+  - 'Gharial'
+  - 'Albatross'
+  - 'Dhole'
+  - 'Kookaburra'
+  - 'Monarch butterfly'
+  - 'Uakari'
+  - 'Bottlenose dolphin'
+  - 'Platypus'
+  - 'Brown bear'
+
+
+
+# ------- not tunable via CLI -------
+batched_block_size: 50
+target_num_questions: 15
+num_mc_samples: 15
+max_num_samples: 50
+min_num_samples: 15
+threshold_rejection_probability: 0.2
+
+model_runtime:
+  max_model_len: 1500
+  max_model_len_thinking: 5000
+  thinking_token_budget: 3000
+  gpu_memory_util: 0.9
+  max_num_seqs: 50
+
+generation_temperature_simple: 1.0
+answer_temperature: 0.7
+generation_temperature_diverse: 1.3

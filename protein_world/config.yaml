@@ -1,0 +1,49 @@
+# ------- tunable via CLI -------
+# how many proteins to classify
+num_worlds_per_run: 5
+proteins_per_world: 8
+
+# world setup
+# if True, load the fixed showcase world (appendix example instance) instead of generating a
+# random one; only supported for exp_type "simple" or "complex"
+do_showcase_world: False
+
+num_protein_classes: 8
+num_attr: 6
+num_experiments: 6
+
+# options:
+  # simple (independent attributes, exp reveals exact value of one protein)
+  # simple_noisy (independent attributes, exp reveals noisy value of one protein)
+  # slightly_complex (inter-dependent attributes, exp reveals noisy value of one protein)
+  # complex (inter-dependent attributes, exp depends on multiple attributes in complex ways)
+exp_type: "simple"
+
+# each entry describes which attributes the corresponding attribute should depend on
+pre_req_list:
+  - []
+  - []
+  - []
+  - []
+  - []
+  - []
+  - []
+  - []
+
+
+
+# ------- not tunable via CLI -------
+exp_noise: 0.1
+num_mc_samples: 30000
+experiment_selection: "eig"
+num_eig_samples: 500
+
+model_runtime:
+  max_model_len: 3000
+  max_model_len_thinking: 12000
+  thinking_token_budget: 9000
+  gpu_memory_util: 0.9
+  max_num_seqs: 16
+
+generation_temperature_simple: 1.0
+answer_temperature: 0.7

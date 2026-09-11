@@ -1,0 +1,67 @@
+# --- local, no reasoning ---------------------------------------------------------------------
+
+qwen-2.5:
+  model_name: "Qwen/Qwen2.5-32B-Instruct"
+  provider: "local"
+  family: "default"
+  thinking: False
+
+phi-4:
+  model_name: "microsoft/phi-4"
+  provider: "local"
+  family: "default"
+  thinking: False
+
+gemma-4-31b:
+  model_name: "google/gemma-4-31B-it"
+  provider: "local"
+  family: "gemma"
+  thinking: False
+
+gemma-4-26b:
+  model_name: "google/gemma-4-26B-A4B-it"
+  provider: "local"
+  family: "gemma"
+  thinking: False
+
+qwen-3.6:
+  model_name: "Qwen/Qwen3.6-35B-A3B"
+  provider: "local"
+  family: "qwen"
+  thinking: False
+
+# --- local, reasoning ------------------------------------------------------------------------
+
+gemma-4-31b-reasoning:
+  model_name: "google/gemma-4-31B-it"
+  provider: "local"
+  family: "gemma"
+  thinking: True
+
+gemma-4-26b-reasoning:
+  model_name: "google/gemma-4-26B-A4B-it"
+  provider: "local"
+  family: "gemma"
+  thinking: True
+
+qwen-3.6-reasoning:
+  model_name: "Qwen/Qwen3.6-35B-A3B"
+  provider: "local"
+  family: "qwen"
+  thinking: True
+
+# --- API ------------------------------------------------------------------------------------
+
+gemini-2.5-pro-reasoning:
+  model_name: "gemini-2.5-pro"
+  provider: "gemini"
+  thinking: True
+  kwargs:
+    allow_code: False
+
+gemini-2.5-pro-reasoning-code:
+  model_name: "gemini-2.5-pro"
+  provider: "gemini"
+  thinking: True
+  kwargs:
+    allow_code: True
